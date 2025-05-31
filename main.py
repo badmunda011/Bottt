@@ -48,7 +48,7 @@ async def start(m: UpdateNewMessage):
     channel2 = "@teysysyt"  # Replace with the actual username of your second channel
 
     if not await is_user_on_chat(bot, channel1, m.peer_id) or not await is_user_on_chat(bot, channel2, m.peer_id):
-        return await m.reply("𝐏𝐥𝐞𝐚𝐬𝐞 𝐣𝐨𝐢𝐧 @mavimods2 𝐚𝐧𝐝 @mavibot_support 𝐛𝐞𝐟𝐨𝐫𝐞 𝐮𝐬𝐢𝐧𝐠 𝐭𝐡𝐞 𝐛𝐨𝐭.")
+        return await m.reply("𝐏𝐥𝐞𝐚𝐬𝐞 𝐣𝐨𝐢𝐧 @teysysyt 𝐚𝐧𝐝 @teysysyt 𝐛𝐞𝐟𝐨𝐫𝐞 𝐮𝐬𝐢𝐧𝐠 𝐭𝐡𝐞 𝐛𝐨𝐭.")
 
     await m.reply(reply_text, link_preview=False, parse_mode="markdown")
 
@@ -58,15 +58,15 @@ async def start(m: UpdateNewMessage):
     fileid = db.get(str(text))
 
     # Define the channels
-    channel1 = "@mavimods2"
-    channel2 = "@mavibot_support"
+    channel1 = "@teysysyt"
+    channel2 = "@teysysyt"
 
     # Check if the user is a member of both channels
     check_channel1 = await is_user_on_chat(bot, channel1, m.peer_id)
     check_channel2 = await is_user_on_chat(bot, channel2, m.peer_id)
 
     if not check_channel1 or not check_channel2:
-        return await m.reply("𝐏𝐥𝐞𝐚𝐬𝐞 𝐣𝐨𝐢𝐧 @mavimods2 𝐚𝐧𝐝 @mavibot_support 𝐛𝐞𝐟𝐨𝐫𝐞 𝐮𝐬𝐢𝐧𝐠 𝐭𝐡𝐞 𝐛𝐨𝐭.")
+        return await m.reply("𝐏𝐥𝐞𝐚𝐬𝐞 𝐣𝐨𝐢𝐧 @teysysyt 𝐚𝐧𝐝 @teysysyt 𝐛𝐞𝐟𝐨𝐫𝐞 𝐮𝐬𝐢𝐧𝐠 𝐭𝐡𝐞 𝐛𝐨𝐭.")
 
     await bot(
         ForwardMessagesRequest(
@@ -138,8 +138,8 @@ async def get_message(m: Message):
 
 async def handle_message(m: Message):
     # Define the channels
-    channel1 = "@mavimods2"
-    channel2 = "@mavibot_support" # Replace with your second channel
+    channel1 = "@teysysyt"
+    channel2 = "@teysysyt" # Replace with your second channel
 
     # Check if the user is a member of both channels
     check_channel1 = await is_user_on_chat(bot, channel1, m.peer_id)
@@ -261,7 +261,7 @@ File Name: `{data['file_name']}`
 Size: **{data["size"]}** 
 Direct Link: [Click Here](https://t.me/MaviTerabox_bot?start={uuid})
 
-@mavimods2
+@teysysyt
 """,
             supports_streaming=True,
             spoiler=True,
@@ -285,7 +285,7 @@ File Name: `{data['file_name']}`
 Size: **{data["size"]}** 
 Direct Link: [Click Here](https://t.me/MaviTerabox_bot?start={uuid})
 
-@mavimods2
+@teysysyt
 """,
             progress_callback=progress_bar,
             thumb=thumbnail if thumbnail else None,
